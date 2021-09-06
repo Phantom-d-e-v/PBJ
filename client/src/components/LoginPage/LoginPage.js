@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Login from "./Login";
-import Register from "./Register";
+import Login from "../Login/Login";
+import Register from "../Register/Register";
+import "./LoginPage.css";
 
 const Render = (props) => {
   if (props.isLogin === "Login") {
@@ -31,10 +32,14 @@ function LoginPage(props) {
       <header>
         <h1>CV Generator(Temp Name)</h1>
       </header>
-      <button onClick={() => setIsLogin("Login")}>
-        Already hav an account
-      </button>
-      <button onClick={() => setIsLogin("Register")}>Create an account</button>
+      <div class="Button">
+        <button id="Login" onClick={() => setIsLogin("Login")}>
+          Login
+        </button>
+        <button id="Register" onClick={() => setIsLogin("Register")}>
+          Register
+        </button>
+      </div>
       <Render isLogin={isLogin} />
     </div>
   );
