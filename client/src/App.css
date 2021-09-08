@@ -4,6 +4,10 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+body {
+  background: gray;
+}
+
 header {
   font-size: 2rem;
   display: flex;
@@ -16,5 +20,5 @@ header {
 
 div {
   font-size: 2rem;
-  width: 100%;
+  width: 100vw;
 }

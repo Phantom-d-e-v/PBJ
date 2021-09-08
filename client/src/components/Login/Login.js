@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import "./Login.css";
+import "../LoginPage/LoginPage.css";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const props = useSpring({
+  const animProp = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
   });
 
   const handleSubmit = (e) => {};
   return (
-    <animated.div class="login" style={props}>
+    <animated.div style={animProp}>
       <h2>Login:</h2>
       <form onSubmit={handleSubmit}>
         <label for="u_name">Username:</label>

@@ -6,13 +6,13 @@ import "./LoginPage.css";
 const Render = (props) => {
   if (props.isLogin === "Login") {
     return (
-      <div>
+      <div className="loginpage">
         <Login />
       </div>
     );
   } else if (props.isLogin === "Register") {
     return (
-      <div>
+      <div className="registerpage">
         <Register />
       </div>
     );
