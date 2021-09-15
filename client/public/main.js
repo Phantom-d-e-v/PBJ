@@ -1,6 +1,10 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 const isDev = require("electron-is-dev");
 const path = require("path");
+const { windowsStore } = require("process");
+
+let templateWindow;
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1920,
@@ -8,8 +12,31 @@ function createWindow() {
     webPreferences: {},
   });
 
+  const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+  Menu.setApplicationMenu(mainMenu);
   win.loadURL("http://localhost:3000");
 }
+
+function createTemplateWindow() {
+  templateWindow = new BrowserWindow({
+    width: 500,
+    height: 800,
+    title: "Choose Template",
+    autoHideMenuBar: true,
+    webPreferences: {},
+  });
+
+  templateWindow.loadURL("http://localhost:3000/template");
+}
+
+const mainMenuTemplate = [
+  {
+    label: "Template",
+    click() {
+      createTemplateWindow();
+    },
+  },
+];
 
 app.on("ready", createWindow);
 
