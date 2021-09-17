@@ -1,29 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 label {
   display: flex;
   justify-content: center;
+  font-weight: 200px;
 }
 
 form {
-  height: 200px;
-  width: 200px;
-  transition: all 0.2s;
-  position: absolute;
-  top: 25%;
-  left: 25%;
+  display: flex;
+  align-items: center;
 }
 
 button {
-  border: firebrick 1px double;
-  margin: 0;
+  border: firebrick 2px double;
+  border-radius: 7rem;
   padding: 0;
+  transition: all 0.4s;
 }
 
-button:hover {
-  border: firebrick 2px double;
-  transform: scale(20px, 20px, 20px);
+img {
+  object-fit: none;
+}
+
+.imageButton {
+  flex-grow: 0.3;
+}
+
+.imageButton:hover {
+  transform: scale(1.05);
+}
+
+span {
+  flex-grow: 5;
+}
+
+.leftTraverse {
+  flex-grow: 1;
+  transform: rotateY(-180deg);
+}
+
+.rightTraverse {
+  flex-grow: 1;
+}
+
+.leftTraverse:hover {
+  transform: scale(1.1) rotateY(180deg);
+}
+
+.rightTraverse:hover {
+  transform: scale(1.1);
 }

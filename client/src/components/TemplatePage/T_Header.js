@@ -1,6 +1,5 @@
 import React from "react";
 import T_Form from "./T_Form";
-import "./Template.css";
 
 const T_Header = () => {
   return (
