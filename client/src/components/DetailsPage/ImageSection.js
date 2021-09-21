@@ -4,10 +4,10 @@ const ImageSection = () => {
   return (
     <div>
       <img className="DetailsPage_displayPicture"></img>
-      <form>
+      <form className="DetailsPage_Image_form" method="post">
         <section className="DetailsPage_languages">
           Languages:
-          <textarea id="DetailsPage_language" />
+          <textarea id="DetailsPage_language" placeholder="English, French" />
         </section>
         <section className="DetailsPage_techSkills">
           Technical Skills:
@@ -15,12 +15,12 @@ const ImageSection = () => {
             <li>
               <input
                 type="text"
-                id="DetailsPage_techSkills"
+                id="DetailsPage_techSkills_1"
                 placeholder="Lorem ipsum dolor sit amet"
               />
               <input
                 type="text"
-                id="DetailsPage_techSkills"
+                id="DetailsPage_techSkills_2"
                 placeholder="Lorem ipsum dolor sit amet"
               />
             </li>
@@ -32,12 +32,12 @@ const ImageSection = () => {
             <li>
               <input
                 type="text"
-                id="DetailsPage_hobbies"
+                id="DetailsPage_hobbies_1"
                 placeholder="Sed nisl neque"
               />
               <input
                 type="text"
-                id="DetailsPage_hobbies"
+                id="DetailsPage_hobbies_2"
                 placeholder="Sed nisl neque"
               />
             </li>

@@ -3,7 +3,7 @@ import React from "react";
 const DetailsSection = () => {
   return (
     <div>
-      <form>
+      <form className="DetailsPage_Section_form" method="post">
         <header className="DetailsPage_name">
           <input
             type="text"
@@ -23,13 +23,13 @@ const DetailsSection = () => {
           <ul>
             <li>
               <textarea
-                id="DetailsPage_education"
+                id="DetailsPage_education_1"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
               />
             </li>
             <li>
               <textarea
-                id="education"
+                id="DetailsPage_education_2"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
               />
             </li>
@@ -40,13 +40,13 @@ const DetailsSection = () => {
           <ul>
             <li>
               <textarea
-                id="DetailsPage_workExp"
+                id="DetailsPage_workExp_1"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
               />
             </li>
             <li>
               <textarea
-                id="DetailsPage_workExp"
+                id="DetailsPage_workExp_2"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
               />
             </li>
