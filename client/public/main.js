@@ -4,6 +4,7 @@ const path = require("path");
 const { windowsStore } = require("process");
 
 let templateWindow;
+let detailWindow;
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -19,14 +20,27 @@ function createWindow() {
 
 function createTemplateWindow() {
   templateWindow = new BrowserWindow({
-    width: 500,
-    height: 800,
+    width: 800,
+    height: 900,
     title: "Choose Template",
     autoHideMenuBar: true,
+    resizable: false,
     webPreferences: {},
   });
 
   templateWindow.loadURL("http://localhost:3000/template");
+}
+
+function createDetailWindow() {
+  detailWindow = new BrowserWindow({
+    width: 1920,
+    height: 1080,
+    autoHideMenuBar: true,
+    resizable: false,
+    webPreferences: {},
+  });
+
+  detailWindow.loadURL("http://localhost:3000/details");
 }
 
 const mainMenuTemplate = [
@@ -34,6 +48,12 @@ const mainMenuTemplate = [
     label: "Template",
     click() {
       createTemplateWindow();
+    },
+  },
+  {
+    label: "Details",
+    click() {
+      createDetailWindow();
     },
   },
 ];

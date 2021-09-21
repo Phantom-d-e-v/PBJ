@@ -6,15 +6,15 @@ import "./Template.css";
 const T_Form = () => {
   return (
     <form>
-      <button className="leftTraverse">
+      <button className="T_Form_leftTraverse">
         <img src={arrowIconRight}></img>
       </button>
-      <span />
-      <button className="imageButton">
+      <span className="T_Form_Space" />
+      <button className="T_Form_imageButton">
         <img src={t_default}></img>
       </button>
-      <span />
-      <button className="rightTraverse">
+      <span className="T_Form_Space" />
+      <button className="T_Form_rightTraverse">
         <img src={arrowIconRight}></img>
       </button>
     </form>

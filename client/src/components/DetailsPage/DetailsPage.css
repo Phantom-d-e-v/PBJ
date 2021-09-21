@@ -1,0 +1,25 @@
+textarea {
+  resize: none;
+}
+
+.DetailsPage_page {
+  border: palevioletred groove 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  width: 90vw;
+}
+
+.DetailsPage_imageSection {
+  border: crimson solid 2px;
+  border-radius: 10px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.DetailsPage_detailsSection {
+  position: relative;
+
+  flex-grow: 5;
+}

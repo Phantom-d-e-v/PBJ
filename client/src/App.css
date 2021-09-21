@@ -8,7 +8,7 @@ body {
   background: gray;
 }
 
-header {
+.LoginPage_header {
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ header {
   padding: 1.5rem 0px;
 }
 
-div {
+.LoginPage_div {
   font-size: 2rem;
   width: 100vw;
 }

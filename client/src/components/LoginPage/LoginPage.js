@@ -28,8 +28,8 @@ const Render = (props) => {
 function LoginPage(props) {
   const [isLogin, setIsLogin] = useState();
   return (
-    <div>
-      <header>
+    <div className="LoginPage_div">
+      <header className="LoginPage_header">
         <h1>CV Generator(Temp Name)</h1>
       </header>
       <div class="Button">

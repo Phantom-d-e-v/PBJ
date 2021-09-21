@@ -9,7 +9,7 @@ form {
   align-items: center;
 }
 
-button {
+form button {
   border: firebrick 2px double;
   border-radius: 7rem;
   padding: 0;
@@ -20,31 +20,31 @@ img {
   object-fit: none;
 }
 
-.imageButton {
+.T_Form_imageButton {
   flex-grow: 0.3;
 }
 
-.imageButton:hover {
+.T_Form_imageButton:hover {
   transform: scale(1.05);
 }
 
-span {
+.T_Form_Space {
   flex-grow: 5;
 }
 
-.leftTraverse {
+.T_Form_leftTraverse {
   flex-grow: 1;
   transform: rotateY(-180deg);
 }
 
-.rightTraverse {
+.T_Form_rightTraverse {
   flex-grow: 1;
 }
 
-.leftTraverse:hover {
+.T_Form_leftTraverse:hover {
   transform: scale(1.1) rotateY(180deg);
 }
 
-.rightTraverse:hover {
+.T_Form_rightTraverse:hover {
   transform: scale(1.1);
 }
