@@ -21,22 +21,19 @@ const DetailsSection = () => {
   };
 
   return (
-    <div>
+    <div className="DetailsPage_DetailsSection_div">
       <form className="DetailsPage_Section_form" method="post">
         <section className="DetailsPage_about">
-          Name:
-          <span className="DetailsPage_address">
-            <header className="DetailsPage_name">
-              <input
-                type="text"
-                id="DetailsPage_name"
-                placeholder="Your Name"
-                name="uName"
-                value={state.uName}
-                onchange={handleChange}
-              ></input>
-            </header>
-          </span>
+          <header className="DetailsPage_name">
+            <input
+              type="text"
+              id="DetailsPage_name"
+              placeholder="Your Name"
+              name="uName"
+              value={state.uName}
+              onChange={handleChange}
+            ></input>
+          </header>
         </section>
         <section className="DetailsPage_about">
           About:
@@ -130,7 +127,9 @@ const DetailsSection = () => {
             ></input>
           </span>
         </section>
-        <button type="submit">Submit</button>
+        <button type="submit" className="DetailsPage_button">
+          Submit
+        </button>
       </form>
     </div>
   );

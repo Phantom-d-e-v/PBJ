@@ -3,23 +3,251 @@ textarea {
 }
 
 .DetailsPage_page {
-  border: palevioletred groove 5px;
+  border: brown solid 5px;
   border-radius: 5px;
-  box-sizing: border-box;
-  position: absolute;
-  display: flex;
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 103, 158, 1) 0%,
+    rgba(43, 136, 217, 0.95) 50%,
+    rgba(32, 124, 202, 0.95) 51%,
+    rgba(125, 185, 232, 0.9) 100%
+  );
   width: 90vw;
+  height: 70vw;
+  margin: 10px auto;
 }
 
 .DetailsPage_imageSection {
+  float: left;
   border: crimson solid 2px;
   border-radius: 10px;
-  position: relative;
-  flex-grow: 1;
+  background: cornflowerblue;
+  width: 25%;
+  height: 90%;
+  margin: 20px 35px 0px 25px;
+}
+
+.DetailsPage_ImageSection_div {
+  height: 100%;
+  width: 100%;
+}
+
+.DetailsPage_Image_form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.DetailsPage_displayPicture {
+  flex: 1 1 auto;
+  margin-top: 20px;
+  height: 10%;
+  width: 50%;
+  border: 2px solid black;
+}
+
+.DetailsPage_languages {
+  flex: 2 1 auto;
+  font-size: 2rem;
+  width: 85%;
+  display: block;
+}
+
+.DetailsPage_techSkills {
+  flex: 3 1 auto;
+  font-size: 2rem;
+  width: 85%;
+}
+
+.DetailsPage_hobbies {
+  flex: 2 1 auto;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  width: 85%;
 }
 
 .DetailsPage_detailsSection {
-  position: relative;
+  float: left;
+  height: 95%;
+  width: 70%;
+  margin-top: 15px;
+  font-size: 2rem;
+}
 
-  flex-grow: 5;
+.DetailsPage_DetailsSection_div {
+  height: 100%;
+  width: 100%;
+}
+
+.DetailsPage_Section_form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.DetailsPage_name {
+  flex: 1 1 auto;
+}
+.DetailsPage_about {
+  flex: 2 1 auto;
+  display: block;
+}
+
+.DetailsPage_education {
+  flex: 4 1 auto;
+}
+
+.DetailsPage_workExp {
+  flex: 10 1 auto;
+}
+
+.DetailsPage_contact {
+  flex: 2 1 auto;
+}
+
+.DetailsPage_button {
+  flex: 0.2 1 auto;
+  margin: 0 auto;
+  width: 30%;
+  height: 3rem;
+  font-size: 2rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_language {
+  font-size: 1rem;
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_techSkills_1 {
+  font-size: 1rem;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_techSkills_2 {
+  font-size: 1rem;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_hobbies_1 {
+  font-size: 1rem;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_hobbies_2 {
+  font-size: 1rem;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_techSkills_li {
+  list-style-type: none;
+}
+
+#DetailsPage_hobbies_li {
+  list-style-type: none;
+}
+
+.DetailsPage_education li {
+  list-style-type: none;
+}
+
+.DetailsPage_workExp li {
+  list-style-type: none;
+}
+
+#DetailsPage_name {
+  font-size: 5rem;
+  font-style: oblique;
+  color: antiquewhite;
+  background: none;
+  border-style: none;
+}
+
+#DetailsPage_about {
+  font-size: 1rem;
+  width: 90%;
+  border: 1px solid black;
+  padding: 0.6rem;
+  border-radius: 5px;
+  display: block;
+}
+
+#DetailsPage_education_1 {
+  font-size: 1.2rem;
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_education_2 {
+  font-size: 1.2rem;
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_workExp_1 {
+  font-size: 1.2rem;
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#DetailsPage_workExp_2 {
+  font-size: 1.2rem;
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.DetailsPage_address {
+  display: block;
+}
+
+#DetailsPage_address {
+  font-size: 1rem;
+  width: 40%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+}
+
+#DetailsPage_number {
+  font-size: 1rem;
+  width: 20%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+}
+#DetailsPage_email {
+  font-size: 1rem;
+  width: 20%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
 }

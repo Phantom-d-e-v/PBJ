@@ -1,4 +1,14 @@
-button {
+.Button {
+  display: grid;
+  /* margin: 2rem; */
+  color: rgba(0, 0, 0, 0);
+}
+
+.Button:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+#Login {
   font-size: 3rem;
   cursor: pointer;
   overflow: hidden;
@@ -10,14 +20,16 @@ button {
   transition: all 0.5s;
 }
 
-.Button {
-  display: grid;
-  /* margin: 2rem; */
-  color: rgba(0, 0, 0, 0);
-}
-
-.Button:hover {
-  color: rgba(0, 0, 0, 1);
+#Register {
+  font-size: 3rem;
+  cursor: pointer;
+  overflow: hidden;
+  border: blue solid 2px;
+  border-radius: 5rem;
+  box-sizing: border-box;
+  margin: 2rem 30px;
+  padding: 10rem;
+  transition: all 0.5s;
 }
 
 #Login:hover {

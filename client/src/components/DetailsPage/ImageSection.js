@@ -17,9 +17,9 @@ const ImageSection = () => {
   };
 
   return (
-    <div>
-      <img className="DetailsPage_displayPicture"></img>
+    <div className="DetailsPage_ImageSection_div">
       <form className="DetailsPage_Image_form" method="post">
+        <img className="DetailsPage_displayPicture"></img>
         <section className="DetailsPage_languages">
           Languages:
           <textarea
@@ -33,7 +33,7 @@ const ImageSection = () => {
         <section className="DetailsPage_techSkills">
           Technical Skills:
           <ul>
-            <li>
+            <li id="DetailsPage_techSkills_li">
               <input
                 type="text"
                 id="DetailsPage_techSkills_1"
@@ -56,7 +56,7 @@ const ImageSection = () => {
         <section className="DetailsPage_hobbies">
           Hobbies:
           <ul>
-            <li>
+            <li id="DetailsPage_hobbies_li">
               <input
                 type="text"
                 id="DetailsPage_hobbies_1"

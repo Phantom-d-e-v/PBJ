@@ -5,7 +5,7 @@ import "./Template.css";
 
 const T_Form = () => {
   return (
-    <form>
+    <form className="T_Form_form">
       <button className="T_Form_leftTraverse">
         <img src={arrowIconRight}></img>
       </button>

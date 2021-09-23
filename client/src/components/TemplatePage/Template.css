@@ -4,12 +4,12 @@ label {
   font-weight: 200px;
 }
 
-form {
+.T_Form_form {
   display: flex;
   align-items: center;
 }
 
-form button {
+.T_Form_form button {
   border: firebrick 2px double;
   border-radius: 7rem;
   padding: 0;
