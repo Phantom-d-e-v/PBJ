@@ -1,0 +1,56 @@
+.AdminPage_Header {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: blue;
+  padding: 1.5rem 0px;
+}
+
+.AdminPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.AdminPage_DisplayUsersButton {
+  width: 300px;
+  height: 150px;
+  border-radius: 15px;
+  border: 2px solid brown;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.AdminPage .AdminPage_DisplayUsersButton:hover {
+  cursor: pointer;
+}
+
+.AdminPage_Users {
+  width: 500px;
+  height: 100px;
+  border-radius: 15px;
+  border: 2px solid brown;
+  background-color: cornsilk;
+  padding: 0.5rem;
+  display: flex;
+}
+
+.AdminPage_Users h3 {
+  padding: 0.2rem;
+}
+
+.AdminPage_UpdateButton {
+  flex: 1 1 40%;
+}
+
+.AdminPage_UpdateButton button {
+  width: 3.5rem;
+  font-size: 1rem;
+}
+
+.AdminPage_Users div {
+  flex: 1 1 auto;
+}

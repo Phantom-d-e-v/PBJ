@@ -5,6 +5,7 @@ const { windowsStore } = require("process");
 
 let templateWindow;
 let detailWindow;
+let adminWindow;
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -43,6 +44,17 @@ function createDetailWindow() {
   detailWindow.loadURL("http://localhost:3000/details");
 }
 
+function createAdminWindow() {
+  adminWindow = new BrowserWindow({
+    width: 1920,
+    height: 1080,
+    autoHideMenuBar: false,
+    resizable: false,
+    webPreferences: {},
+  });
+
+  adminWindow.loadURL("http://localhost:3000/admin");
+}
 const mainMenuTemplate = [
   {
     label: "Template",
@@ -54,6 +66,12 @@ const mainMenuTemplate = [
     label: "Details",
     click() {
       createDetailWindow();
+    },
+  },
+  {
+    label: "Admin",
+    click() {
+      createAdminWindow();
     },
   },
 ];

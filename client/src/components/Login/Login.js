@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import "../LoginPage/LoginPage.css";
 import axios from "axios";
+import { withRouter } from "react-router-dom";
 
-function Login() {
+function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,30 +21,32 @@ function Login() {
     setUsername(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const loginUser = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/login", { username, password })
-      .then((res) => {
-        console.log(res);
+      .post("http://localhost:5000/login", {
+        username: username,
+        password: password,
+      })
+      .then((response) => {
+        console.log(response.data);
+        console.log(`user id: ${response.data}`);
+        let data = response.data;
+        //map
+        if (data === 1 || 2) {
+          props.history.push("/admin");
+        } else if (response === 0) {
+          console.log(`wrong`);
+        } else {
+          console.log(`wait`);
+        }
       });
-    // axios
-    //   .post(
-    //     "http://localhost:5000/login",
-    //     {},
-    //     {
-    //       auth: { username: { username }, password: { password } },
-    //     }
-    //   )
-    //   .then((res) => {
-    //     console.log(res);
-    //   });
   };
 
   return (
     <animated.div style={animProp}>
       <h2>Login:</h2>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label for="u_name">Username:</label>
         <input
           id="u_name"
@@ -63,10 +66,10 @@ function Login() {
         ></input>
         <br />
         <br />
-        <input type="submit" value="Login"></input>
+        <button onClick={loginUser}>Login</button>
       </form>
     </animated.div>
   );
 }
 
-export default Login;
+export default withRouter(Login);
