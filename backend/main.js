@@ -52,14 +52,16 @@ app.post("/login", (req, res) => {
   const pass = req.body.password;
 
   db.query(
-    `SELECT id FROM users where username = '${uName}' AND password = '${pass}'`,
+    `SELECT * FROM users where username = '${uName}' AND password = '${pass}'`,
     (err, result) => {
       if (err) {
-        console.log(err);
-      } else if (result.length === 0) {
-        res.send(`incorrect details`);
-      } else {
+        res.send({ err: err });
+      }
+
+      if (result.length > 0) {
         res.send(result);
+      } else {
+        res.send({ message: "Wrong" });
       }
     }
   );

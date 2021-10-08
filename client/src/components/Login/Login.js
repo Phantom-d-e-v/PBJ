@@ -30,15 +30,10 @@ function Login(props) {
       })
       .then((response) => {
         console.log(response.data);
-        console.log(`user id: ${response.data}`);
-        let data = response.data;
-        //map
-        if (data === 1 || 2) {
-          props.history.push("/admin");
-        } else if (response === 0) {
-          console.log(`wrong`);
+        if (response.data.message) {
+          console.log(`err`);
         } else {
-          console.log(`wait`);
+          props.history.push("/admin");
         }
       });
   };
