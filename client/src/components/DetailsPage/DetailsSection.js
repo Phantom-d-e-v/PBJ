@@ -1,39 +1,68 @@
 import React, { useState } from "react";
+import { global } from "../../stores/global.store";
 
 const DetailsSection = () => {
-  const [state, setState] = useState({
-    uName: "",
-    about: "",
-    education: "",
-    education1: "",
-    work: "",
-    work1: "",
-    address: "",
-    number: "",
-    email: "",
-  });
+  const {
+    uName,
+    about,
+    education,
+    education1,
+    work,
+    work1,
+    address,
+    number,
+    email,
+    setUName,
+    setAbout,
+    setEducation,
+    setEducation1,
+    setWork,
+    setWork1,
+    setAddress,
+    setNumber,
+    setEmail,
+  } = global();
 
-  const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-    });
+  const handleUName = (e) => {
+    setUName(e.target.value);
+  };
+  const handleAbout = (e) => {
+    setAbout(e.target.value);
+  };
+  const handleEducation = (e) => {
+    setEducation(e.target.value);
+  };
+  const handleEducation1 = (e) => {
+    setEducation1(e.target.value);
+  };
+  const handleWork = (e) => {
+    setWork(e.target.value);
+  };
+  const handleWork1 = (e) => {
+    setWork1(e.target.value);
+  };
+  const handleAddress = (e) => {
+    setAddress(e.target.value);
+  };
+  const handleNumber = (e) => {
+    setNumber(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
 
   return (
     <div className="DetailsPage_DetailsSection_div">
       <form className="DetailsPage_Section_form" method="post">
-        <section className="DetailsPage_about">
-          <header className="DetailsPage_name">
-            <input
-              type="text"
-              id="DetailsPage_name"
-              placeholder="Your Name"
-              name="uName"
-              value={state.uName}
-              onChange={handleChange}
-            ></input>
-          </header>
+        <section className="DetailsPage_name">
+          <input
+            type="text"
+            id="DetailsPage_name"
+            placeholder="Your Name"
+            name="uName"
+            value={uName}
+            onChange={handleUName}
+          ></input>
         </section>
         <section className="DetailsPage_about">
           About:
@@ -41,8 +70,8 @@ const DetailsSection = () => {
             id="DetailsPage_about"
             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at turpis fermentum, pharetra metus vitae, mattis quam. Quisque posuere laoreet neque, vel iaculis arcu lacinia in. Cras gravida eleifend ligula."
             name="about"
-            value={state.about}
-            onChange={handleChange}
+            value={about}
+            onChange={handleAbout}
           ></textarea>
         </section>
         <section className="DetailsPage_education">
@@ -53,8 +82,8 @@ const DetailsSection = () => {
                 id="DetailsPage_education_1"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
                 name="education"
-                value={state.education}
-                onChange={handleChange}
+                value={education}
+                onChange={handleEducation}
               />
             </li>
             <li>
@@ -62,8 +91,8 @@ const DetailsSection = () => {
                 id="DetailsPage_education_2"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
                 name="education1"
-                value={state.education1}
-                onChange={handleChange}
+                value={education1}
+                onChange={handleEducation1}
               />
             </li>
           </ul>
@@ -76,8 +105,8 @@ const DetailsSection = () => {
                 id="DetailsPage_workExp_1"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
                 name="work"
-                value={state.work}
-                onChange={handleChange}
+                value={work}
+                onChange={handleWork}
               />
             </li>
             <li>
@@ -85,8 +114,8 @@ const DetailsSection = () => {
                 id="DetailsPage_workExp_2"
                 placeholder="Curabitur in lacus justo. Maecenas posuere luctus ultricies. Class aptent taciti sociosqu ad litora"
                 name="work1"
-                value={state.work1}
-                onChange={handleChange}
+                value={work1}
+                onChange={handleWork1}
               />
             </li>
           </ul>
@@ -100,8 +129,8 @@ const DetailsSection = () => {
               id="DetailsPage_address"
               placeholder="XYZ, 123 , Pune, India"
               name="address"
-              value={state.address}
-              onChange={handleChange}
+              value={address}
+              onChange={handleAddress}
             ></input>
           </span>
           <span className="DetailsPage_number">
@@ -111,8 +140,8 @@ const DetailsSection = () => {
               id="DetailsPage_number"
               placeholder="9823410569"
               name="number"
-              value={state.number}
-              onChange={handleChange}
+              value={number}
+              onChange={handleNumber}
             ></input>
           </span>
           <span className="DetailsPage_email">
@@ -122,14 +151,11 @@ const DetailsSection = () => {
               id="DetailsPage_email"
               placeholder="abcdefghijk@gmail.com"
               name="email"
-              value={state.email}
-              onChange={handleChange}
+              value={email}
+              onChange={handleEmail}
             ></input>
           </span>
         </section>
-        <button type="submit" className="DetailsPage_button">
-          Submit
-        </button>
       </form>
     </div>
   );

@@ -5,7 +5,7 @@
 }
 
 body {
-  background: gray;
+  background: whitesmoke;
 }
 
 .LoginPage_header {
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   z-index: 1;
   width: 100%;
-  background: blue;
+  background: rgb(245, 104, 88);
   padding: 1.5rem 0px;
 }
 

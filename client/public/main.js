@@ -56,24 +56,24 @@ function createAdminWindow() {
   adminWindow.loadURL("http://localhost:3000/admin");
 }
 const mainMenuTemplate = [
-  {
-    label: "Template",
-    click() {
-      createTemplateWindow();
-    },
-  },
-  {
-    label: "Details",
-    click() {
-      createDetailWindow();
-    },
-  },
-  {
-    label: "Admin",
-    click() {
-      createAdminWindow();
-    },
-  },
+  // {
+  //   label: "Template",
+  //   click() {
+  //     createTemplateWindow();
+  //   },
+  // },
+  // {
+  //   label: "Details",
+  //   click() {
+  //     createDetailWindow();
+  //   },
+  // },
+  // {
+  //   label: "Admin",
+  //   click() {
+  //     createAdminWindow();
+  //   },
+  // },
 ];
 
 app.on("ready", createWindow);

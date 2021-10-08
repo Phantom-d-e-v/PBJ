@@ -12,7 +12,7 @@
   font-size: 3rem;
   cursor: pointer;
   overflow: hidden;
-  border: blue solid 2px;
+  border: black solid 2px;
   border-radius: 5rem;
   box-sizing: border-box;
   margin: 2rem 30px;
@@ -24,7 +24,7 @@
   font-size: 3rem;
   cursor: pointer;
   overflow: hidden;
-  border: blue solid 2px;
+  border: black solid 2px;
   border-radius: 5rem;
   box-sizing: border-box;
   margin: 2rem 30px;
@@ -56,4 +56,9 @@
 .registerpage {
   margin: 0px 0px 0px 45vw;
   width: 50vw;
+}
+
+.LoginPage_Login_Form button {
+  width: 100px;
+  font-size: 1rem;
 }

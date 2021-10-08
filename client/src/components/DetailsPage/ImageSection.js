@@ -1,19 +1,42 @@
 import React, { useState } from "react";
+import { global } from "../../stores/global.store";
 
 const ImageSection = () => {
-  const [state, setState] = useState({
-    languages: "",
-    techSkills: "",
-    techSkills1: "",
-    hobbies: "",
-    hobbies1: "",
-  });
+  // const [state, setState] = useState({
+  //   languages: "",
+  //   techSkills: "",
+  //   techSkills1: "",
+  //   hobbies: "",
+  //   hobbies1: "",
+  // });
 
-  const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-    });
+  const {
+    languages,
+    techSkills,
+    techSkills1,
+    hobbies,
+    hobbies1,
+    setLanguages,
+    setTechSkills,
+    setTechSkills1,
+    setHobbies,
+    setHobbies1,
+  } = global();
+
+  const handleLanguages = (e) => {
+    setLanguages(e.target.value);
+  };
+  const handleTechSkills = (e) => {
+    setTechSkills(e.target.value);
+  };
+  const handleTechSkills1 = (e) => {
+    setTechSkills1(e.target.value);
+  };
+  const handleHobbies = (e) => {
+    setHobbies(e.target.value);
+  };
+  const handleHobbies1 = (e) => {
+    setHobbies1(e.target.value);
   };
 
   return (
@@ -26,8 +49,8 @@ const ImageSection = () => {
             id="DetailsPage_language"
             placeholder="English, French"
             name="languages"
-            value={state.languages}
-            onChange={handleChange}
+            value={languages}
+            onChange={handleLanguages}
           />
         </section>
         <section className="DetailsPage_techSkills">
@@ -39,16 +62,16 @@ const ImageSection = () => {
                 id="DetailsPage_techSkills_1"
                 placeholder="Lorem ipsum dolor sit amet"
                 name="techSkills"
-                value={state.techSkills}
-                onChange={handleChange}
+                value={techSkills}
+                onChange={handleTechSkills}
               />
               <input
                 type="text"
                 id="DetailsPage_techSkills_2"
                 placeholder="Lorem ipsum dolor sit amet"
                 name="techSkills1"
-                value={state.techSkills1}
-                onChange={handleChange}
+                value={techSkills1}
+                onChange={handleTechSkills1}
               />
             </li>
           </ul>
@@ -62,16 +85,16 @@ const ImageSection = () => {
                 id="DetailsPage_hobbies_1"
                 placeholder="Sed nisl neque"
                 name="hobbies"
-                value={state.hobbies}
-                onChange={handleChange}
+                value={hobbies}
+                onChange={handleHobbies}
               />
               <input
                 type="text"
                 id="DetailsPage_hobbies_2"
                 placeholder="Sed nisl neque"
                 name="hobbies1"
-                value={state.hobbies1}
-                onChange={handleChange}
+                value={hobbies1}
+                onChange={handleHobbies1}
               />
             </li>
           </ul>

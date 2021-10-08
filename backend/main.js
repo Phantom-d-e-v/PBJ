@@ -93,7 +93,82 @@ app.put("/update", (req, res) => {
   );
 });
 
-// app.delete();
+app.delete("/delete/:username", (req, res) => {
+  const username = req.params.username; //Passing username through parameters
+  db.query("DELETE FROM users WHERE username = ?", username),
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    };
+});
+
+app.get("/templates", (req, res) => {
+  db.query("SELECT template_path FROM template", (err, result) => {
+    if (err) {
+      res.send({ err: err });
+    } else {
+      console.log(`templatepath: ${JSON.stringify(result)}`);
+      res.send(JSON.stringify(result));
+    }
+  });
+});
+
+app.post("/updatecv", (req, res) => {
+  const name = req.body.name;
+  const about = req.body.about;
+  const education1 = req.body.education1;
+  const education2 = req.body.education2;
+  const work1 = req.body.work1;
+  const work2 = req.body.work2;
+  const address = req.body.address;
+  const pnumber = req.body.pnumber;
+  const email = req.body.email;
+  const languages = req.body.languages;
+  const tskills1 = req.body.tskills1;
+  const tskills2 = req.body.tskills2;
+  const hobbies1 = req.body.hobbies1;
+  const hobbies2 = req.body.hobbies2;
+
+  db.query(
+    "INSERT INTO cvs (name, about, education1, education2, work1, work2, address, pnumber, email, languages, tskills1, tskills2, hobbies1, hobbies2) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+    [
+      name,
+      about,
+      education1,
+      education2,
+      work1,
+      work2,
+      address,
+      pnumber,
+      email,
+      languages,
+      tskills1,
+      tskills2,
+      hobbies1,
+      hobbies2,
+    ],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.get("/adminlist", (req, res) => {
+  db.query("SELECT name,username,email,password FROM admins", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
 
 app.listen(port, () => {
   console.log(`app listening at http://localhost: ${port}`);

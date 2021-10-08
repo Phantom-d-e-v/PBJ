@@ -1,10 +1,11 @@
 import React from "react";
 import T_Form from "./T_Form";
+import "../TemplatePage/Template.css";
 
-const T_Header = () => {
+const T_Header = (props) => {
   return (
     <div>
-      <label>Choose your Template</label>
+      <label id="T_Header_Label">Choose your Template</label>
       <T_Form />
     </div>
   );

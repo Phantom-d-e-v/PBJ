@@ -17,7 +17,8 @@ function Register() {
       email: email,
       password: password,
     }).then(() => {
-      console.log("sent user info");
+      console.log("Sent user info");
+      alert("Registered user successfully");
     });
   };
   return (

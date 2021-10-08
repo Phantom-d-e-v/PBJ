@@ -1,10 +1,15 @@
-label {
+#T_Header_Label {
   display: flex;
   justify-content: center;
-  font-weight: 200px;
+  font-size: 3rem;
+  font-weight: 800;
+  width: 100%;
+  background: brown;
+  padding: 1.5rem 0px;
 }
 
 .T_Form_form {
+  margin-top: 30px;
   display: flex;
   align-items: center;
 }
@@ -14,6 +19,8 @@ label {
   border-radius: 7rem;
   padding: 0;
   transition: all 0.4s;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 img {
@@ -22,6 +29,14 @@ img {
 
 .T_Form_imageButton {
   flex-grow: 0.3;
+  width: 50%;
+  height: auto;
+}
+
+.T_Form_imageButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .T_Form_imageButton:hover {
@@ -47,4 +62,15 @@ img {
 
 .T_Form_rightTraverse:hover {
   transform: scale(1.1);
+}
+
+.T_Form_Home {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+}
+
+.T_Form_Home button {
+  border: none;
 }
