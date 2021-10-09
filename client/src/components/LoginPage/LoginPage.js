@@ -30,7 +30,7 @@ function LoginPage(props) {
   return (
     <div className="LoginPage_div">
       <header className="LoginPage_header">
-        <h1>CV Generator(Temp Name)</h1>
+        <h1>CV Generator</h1>
       </header>
       <div class="Button">
         <button id="Login" onClick={() => setIsLogin("Login")}>
